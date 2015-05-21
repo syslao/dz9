@@ -1,0 +1,14 @@
+-var selected = 'Планшеты'
+include ../common/head.jade
+body
+	div.wrapper
+		div.container
+			include ../common/header.jade
+			div.main
+				div.wrap
+					include ../common/breadcrumbs.jade
+					div.content
+						block content
+						include ../common/about.jade
+						a.up(href="#") Наверх
+	include ../common/footer.jade

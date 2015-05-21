@@ -1,0 +1,48 @@
+footer.footer
+		div.wrap
+			div.logo-main
+				a(href="/").logo-main__link
+					| ЭпплShop
+			nav.footer-nav
+				-var footernavhead = ['О магазине', 'Каталог', 'Контакты'];
+				-var footernavabout = {'О нас': '', 'Наши цены': '', 'Наши скидки': '', 'Акции': ''};
+				-var footernavcatalog = {'Смартфоны': '', 'Планшеты': '', 'Компьютеры': '', 'Аксессуары': ''};
+				-var footernavcontacts = {'Телефоны': '', 'Адреса': '', 'Карта проезда': '', 'Обратная связь': ''};
+				each val in footernavhead
+					div.footer-nav__column
+						div.footer-nav__heading=val
+						ul.footer-nav__list
+							if val === 'О магазине'
+								each key, value in footernavabout
+									li.footer-nav__item
+										a.footer-nav__link(href=key)=value
+							else if val === 'Каталог'
+								each key, value in footernavcatalog
+									li.footer-nav__item
+										a.footer-nav__link(href=key)=value
+							else if val === 'Контакты'
+								each key, value in footernavcontacts
+									li.footer-nav__item
+										a.footer-nav__link(href=key)=value
+			div.bigsocials
+				ul.bigsocials__apps-list
+					li.bigsocials__item
+						a.bigsocials__link.appstore(href='')
+							| Доступно в AppStore
+					li.bigsocials__item
+						a.bigsocials__link.googleplay(href='')
+							| Доступно в Google Play
+				ul.bigsocials__socials-list
+					li.bigsocials__item
+						a.bigsocials__link.vk(href='http://vk.com')
+							| ВКонтакте
+					li.bigsocials__item
+						a.bigsocials__link.fb(href='http://fb.com')
+							| Facebook
+					li.bigsocials__item
+						a.bigsocials__link.tw(href='http://twitter.com')
+							| Twitter
+
+script(src="bower/jquery/dist/jquery.min.js")
+script(src="bower/jquery-placeholder/jquery.placeholder.min.js")
+script(src="js/main.js")

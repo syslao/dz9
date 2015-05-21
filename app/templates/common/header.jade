@@ -1,0 +1,63 @@
+header.header
+				address.header__contacts
+					div.wrap
+						ul.socials-list
+							li.socials-list__item
+								a.socials-list__link.vk(href="http://vk.com/ablend")
+									|ВКонтакте
+							li.socials-list__item
+								a.socials-list__link.fb(href="http://facebook.com")
+									|Facebook
+							li.socials-list__item
+								a.socials-list__link.tw(href="http://twitter.com")
+									|Twitter
+						div.address
+							| г. Москва, ул. Новая 246, офис 214
+						a(href="tel:+79213221232").phone-link
+							div.phone
+								div.phone__pre
+									| +7 (921)
+								|322 12 32
+				div.header__main
+					div.wrap
+						div.logo
+							a(href="#")
+								img.logo__img(src="img/logo.png", alt="AppleShop" title="AppleShop")
+						div.search
+							form.search__form#search-form
+								div.search__input-block
+									input.search__input#search-input(type="search" name="search-input" placeholder="iMac 27 дюймов")
+								div.search__input-block
+									input.search__submit#search-submit(type="submit" name="search-submit" value="Поиск")
+						-var usernav = {'Карта проезда': '', 'История заказов': '', 'Корзина': ''};
+						nav.user-nav
+							ul.user-nav__list
+								each val, key in usernav
+									if key === 'Корзина'
+										li.user-nav__item.basket
+											-var goods = {'iPhone 6': '', 'iPad Air Wi-Fi + Cellular 128GB - Silver': '', 'Macbook Air': ''}
+											a.user-nav__link(href=val)=key + ' (' + 3 + ')'
+											ul.basket__list
+												each val, key in goods
+													li.basket__item
+														if key === 'iPhone 6'
+															img.basket__img(src="img/goods/iphone.png" alt="iPhone 6")
+														else if key === 'iPad Air Wi-Fi + Cellular 128GB - Silver'
+															img.basket__img(src="img/goods/ipad.png" alt="iPad Air Wi-Fi + Cellular 128GB - Silver")
+														else if key === 'Macbook Air'
+															img.basket__img(src="img/goods/macbook.png" alt='Macbook Air')
+														a.basket__link(href=val)=key
+									else 
+										li.user-nav__item
+											a.user-nav__link(href=val)=key
+				nav.main-nav
+					div.wrap
+						-var mainnav = {'Мобильные телефоны': '/', 'Планшеты': '/', 'Mp3 плееры': '/', 'Персональные компьютеры': '/', 'Ноутбуки': '/', 'Apple TV': '/', 'Аксессуары': '/'};
+							ul.main-nav__list
+								each val, key in mainnav
+									if selected === key
+										li.main-nav__item
+											a.main-nav__link.current(href=val)=key
+									else
+										li.main-nav__item
+												a.main-nav__link(href=val)=key

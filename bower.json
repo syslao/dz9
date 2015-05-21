@@ -1,0 +1,9 @@
+{
+  "name": "dz9",
+  "dependencies": {
+    "normalize.css": "~3.0.3",
+    "modernizr": "~2.8.3",
+    "jquery": "1.11",
+    "jquery-placeholder": "~2.1.1"
+  }
+}

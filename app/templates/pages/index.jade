@@ -1,0 +1,57 @@
+extends ../layouts/main.jade
+
+block title
+	title iPad Air Wi-Fi + Cellular 128GB - Silver
+
+block content
+	div.products.clearfix
+		div.products__pics
+			div.slideshow
+				div.slideshow__display
+					img(src="img/slideshow/1.jpg", alt="").slideshow__display-pic
+				ul.slideshow__list
+					li.slideshow__nav
+						a.slideshow__nav-link.prev
+					-var imgs = ['2.jpg', '3.jpg', '4.jpg']
+					each obj, i in imgs
+						if i === 0
+							li.slideshow__item.active
+								a.slideshow__pic(href="")
+									img(src="img/slideshow/"+obj, alt="").slideshow__img
+						else 
+							li.slideshow__item
+								a.slideshow__pic(href="")
+									img(src="img/slideshow/"+obj, alt="").slideshow__img
+					li.slideshow__nav
+						a.slideshow__nav-link.next
+		div.products__description
+			div.products__title
+				| iPad Air Wi-Fi + Cellular 128GB - Silver
+			table.products__desctable
+					tr.table__row
+						td.table__cell Артикул
+						td.table__cell 4234352525
+					tr.table__row
+						td.table__cell Опция
+						td.table__cell включена
+					tr.table__row
+						td.table__cell Цвет
+						td.table__cell Серебристый
+					tr.table__row
+						td.table__cell Размер
+						td.table__cell 1280*1245*90
+					tr.table__row
+						td.table__cell Вес
+						td.table__cell 200 кг
+					tr.table__row
+						td.table__cell Опция
+						td.table__cell включена
+					tr.table__row
+						td.table__cell Цыет
+						td.table__cell серебристый
+					tr.table__row
+						td.table__cell Размер
+						td.table__cell 1280*1245*90
+					tr.table__row
+						td.table__cell Вес
+						td.table__cell 200 кг
