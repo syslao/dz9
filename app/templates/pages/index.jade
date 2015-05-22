@@ -4,54 +4,67 @@ block title
 	title iPad Air Wi-Fi + Cellular 128GB - Silver
 
 block content
-	div.products.clearfix
-		div.products__pics
-			div.slideshow
-				div.slideshow__display
-					img(src="img/slideshow/1.jpg", alt="").slideshow__display-pic
-				ul.slideshow__list
-					li.slideshow__nav
-						a.slideshow__nav-link.prev
-					-var imgs = ['2.jpg', '3.jpg', '4.jpg']
-					each obj, i in imgs
-						if i === 0
-							li.slideshow__item.active
-								a.slideshow__pic(href="")
-									img(src="img/slideshow/"+obj, alt="").slideshow__img
-						else 
-							li.slideshow__item
-								a.slideshow__pic(href="")
-									img(src="img/slideshow/"+obj, alt="").slideshow__img
-					li.slideshow__nav
-						a.slideshow__nav-link.next
-		div.products__description
-			div.products__title
-				| iPad Air Wi-Fi + Cellular 128GB - Silver
-			table.products__desctable
-					tr.table__row
-						td.table__cell Артикул
-						td.table__cell 4234352525
-					tr.table__row
-						td.table__cell Опция
-						td.table__cell включена
-					tr.table__row
-						td.table__cell Цвет
-						td.table__cell Серебристый
-					tr.table__row
-						td.table__cell Размер
-						td.table__cell 1280*1245*90
-					tr.table__row
-						td.table__cell Вес
-						td.table__cell 200 кг
-					tr.table__row
-						td.table__cell Опция
-						td.table__cell включена
-					tr.table__row
-						td.table__cell Цыет
-						td.table__cell серебристый
-					tr.table__row
-						td.table__cell Размер
-						td.table__cell 1280*1245*90
-					tr.table__row
-						td.table__cell Вес
-						td.table__cell 200 кг
+	.main
+		.main__container
+			.main__content
+				.gallery.main__gallery
+					.gallery__main
+						img(src="img/slideshow/1.jpg").gallery__main-img
+					.gallery__list
+						.gallery__list-wrap
+							.gallery__item
+								a(href="img/slideshow/1.jpg").gallery__link
+									img(src="img/slideshow/1.jpg").gallery__img
+							.gallery__item
+								a(href="img/slideshow/2.jpg").gallery__link
+									img(src="img/slideshow/2.jpg").gallery__img
+							.gallery__item
+								a(href="img/slideshow/3.jpg").gallery__link
+									img(src="img/slideshow/3.jpg").gallery__img
+							.gallery__item
+								a(href="img/slideshow/4.jpg").gallery__link
+									img(src="img/slideshow/4.jpg").gallery__img
+					.gallery__nav
+						a(href="#").gallery__arrow.gallery__arrow-right
+						a(href="#").gallery__arrow.gallery__arrow-left
+				h2.main__title iPad Air Wi-Fi + Cellular 128GB - Silver
+				.features
+					ul.features__list
+						li.features__item
+							.features__name Артикул
+							.features__val 42787825
+						li.features__item
+							.features__name Опция
+							.features__val включена
+						li.features__item
+							.features__name Цвет
+							.features__val серебристый
+						li.features__item
+							.features__name Размер
+							.features__val 1280*1245*90
+						li.features__item
+							.features__name Вес
+							.features__val 200 кг
+						li.features__item
+							.features__name Артикул
+							.features__val 42787825
+						li.features__item
+							.features__name Опция
+							.features__val включена
+						li.features__item
+							.features__name Цвет
+							.features__val серебристый
+						li.features__item
+							.features__name Размер
+							.features__val 1280*1245*90
+						li.features__item
+							.features__name Вес
+							.features__val 200 кг
+				.about-store
+					.about-store__title Пара слов о магазине
+					.about-store__text
+						|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+					.about-store__text
+						|Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					.about-store__text
+						|Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
