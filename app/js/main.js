@@ -5,20 +5,20 @@ var gallery = (function() {
         },
 
         _setUpListeners = function() {
-            $('.gallery__link').on('click touchstart', _changeMainPhoto);
+            $('.gallery__link').on('click', _changeMainPhoto);
             $(document).on('ready', _changeWrapSize);
-            $('.gallery__arrow').on('click touchstart', _changeSlideItems);
+            $('.gallery__arrow').on('click', _changeSlideItems);
         },
 
         _changeMainPhoto = function(e) {
             e.preventDefault();
             var src = $(this).attr('href');
-            var mainPhotoSrc = $('.gallery__main-img');
-            mainPhotoSrc.attr('src', src);
+            $('.gallery__main-img').attr('src', src);
         },
         _changeWrapSize = function() {
             var wrap = $('.gallery__list-wrap');
             var width = 0;
+
 
             wrap.children().each(function(){
                width += $(this).width() + parseInt($(this).css('margin-right'));
