@@ -49,6 +49,7 @@ var gallery = (function() {
 })();
 
 $(document).ready(function(){
+    $('input, textarea').placeholder();
     gallery.init();
 
     $(window).scroll(function () {

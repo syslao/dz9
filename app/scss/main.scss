@@ -315,6 +315,9 @@ body {
     display: inline-block;
     position: relative;
     margin-right: 9px;
+    &:first-child a {
+        padding-left: 20px;
+    }
 }
 
 .main-nav__link {
@@ -386,13 +389,13 @@ body {
 }
 
 .breadcrumbs {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 .breadcrumbs__link {
     font-size: 14px;
     color: #00b9fe;
-    margin-right: 2px;
+    margin-right: 5px;
     &:last-child {
         color: #5c7b98;
         text-decoration: none;
@@ -576,7 +579,7 @@ body {
 }
 
 .main__content {
-    margin-top: 20px;
+    // margin-top: 20px;
 }
 
 .main__title {
@@ -586,7 +589,7 @@ body {
 }
 
 .main__gallery {
-    margin-bottom: 65px;
+    margin-bottom: 59px;
 }
 
 .features {
@@ -606,7 +609,7 @@ body {
 .features__name,
 .features__val {
     display: table-cell;
-    padding: 6px 8px;
+    padding: 4px 8px;
 }
 
 .features__name {
@@ -680,6 +683,7 @@ body {
     width: 298px;
     float: left;
     position: relative;
+    margin-top: 4px;
     margin-right: 28px;
 }
 
